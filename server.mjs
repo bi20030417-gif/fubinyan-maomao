@@ -40,7 +40,7 @@ http.createServer(async (req, res) => {
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
-        body: JSON.stringify({ systemInstruction: { parts: [{ text: instructions }] }, contents, generationConfig: { maxOutputTokens: 900, temperature: 0.85, thinkingConfig: { thinkingBudget: 0 } } }),
+       body: JSON.stringify({ systemInstruction: { parts: [{ text: instructions }] }, contents, generationConfig: { maxOutputTokens: 900, temperature: 0.85 } }),
         signal: AbortSignal.timeout(60000)
       });
       const result = await response.json();
