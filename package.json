@@ -1,8 +1,1 @@
-{
-  "name": "fubinyan-maomao-chat",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {"start": "node server.mjs"},
-  "engines": {"node": ">=20"}
-}
+{"name":"yibei-high-school-v2","version":"0.1.0","private":true,"type":"module","scripts":{"start":"node server.js"},"engines":{"node":">=18"}}
